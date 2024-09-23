@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8fc5cfa97c.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>White Label Portal</title>
+</head>
+
+<body>
+    <!-- Follow BEM CSS Naming Convention -->
+    <div>
+        <nav>
+            <header class="header">
+                <div class="container home">
+                    <div class="home__logo">
+                        <a href="/">
+                            <img class="home__logo--img" src="images/logo.png" alt="Tripjack - 
+            B2B Portal For Travel Agents">
+                        </a>
+                    </div>
+
+                    <div>
+                        <ul class="home__menu">
+                            <li class="home__menu--list"><a class="home__menu--link" href="/">Get started</a></li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">Agents</a>
+                            </li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">Distributors</a>
+                            </li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">Suppliers</a>
+                            </li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">Testimonials</a>
+                            </li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">API/XML</a>
+                            </li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">Careers</a></li>
+                            <li class="home__menu--list"><a class="home__menu--link" href="#">Contact us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </nav>
+
+        <section class="banner">
+            <div class="container">
+                <div class="box banner__box">
+                    <div class="banner__service">
+
+                        <img class="banner__img" src="images/banner-img.png" alt="Banner">
+                        <div class="banner__service--text">
+                            <h2 class="banner__service--title">One Stop Solution For All Your Travel Needs</h2>
+                            <div class="banner__service--icon">
+                                <ul class="service__icon">
+                                    <li class="service__icon--list">
+                                        <img class="service__icon--bg" src="./images/flight.svg" class="" alt="image">
+                                        <p class="service__icon--label">Flights</p>
+                                    </li>
+                                    <li class="service__icon--list">
+                                        <img class="service__icon--bg" src="./images/hotel.svg" class="" alt="image">
+                                        <p class="service__icon--label">Hotels</p>
+                                    </li>
+                                    <li class="service__icon--list">
+                                        <img class="service__icon--bg" src="./images/train_icon.png" alt="image">
+                                        <p class="service__icon--label">Trains</p>
+                                    </li>
+                                </ul>
+                                <ul class="service__icon">
+                                    <li class="service__icon--list">
+                                        <img class="service__icon--bg" src="./images/Holidays.png" class="home-icons"
+                                            alt="image">
+                                        <p class="service__icon--label">Holidays</p>
+                                    </li>
+                                    <li class="service__icon--list">
+                                        <img class="service__icon--bg" src="./images/cruise.png" class="home-icons"
+                                            alt="image">
+                                        <p class="service__icon--label">Cruises</p>
+                                    </li>
+                                    <li class="service__icon--list">
+                                        <img class="service__icon--bg" src="./images/visas.svg" class="" alt="image">
+                                        <p class="service__icon--label">Visas</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__login">
+                        <div>
+                            <h2 class="banner__login--title">Already Using Tripjack?</h2>
+                            <p>Login here to your account as</p>
+
+                            <div class="tabs">
+                                <div>
+                                    <input type="radio" id="tab1" name="tab" checked>
+                                    <label for="tab1" class="tab-label">Agent</label>
+
+                                    <input type="radio" id="tab2" name="tab">
+                                    <label for="tab2" class="tab-label">Distributor</label>
+
+                                    <input type="radio" id="tab3" name="tab">
+                                    <label for="tab3" class="tab-label">Supplier</label>
+
+
+                                    <div class="tab-content">
+                                        <div class="content" id="content1">
+                                            <form class="login__form">
+                                                <div class="form-group form__field">
+                                                    <input type="text" class="form-control form__field--input"
+                                                        placeholder="Email" required>
+                                                    <img class="form__field--icon"
+                                                        src="https://tripjack.com/static/public/img/Form_email.svg"
+                                                        alt="image">
+                                                </div>
+
+                                                <div class="form-group form__field">
+                                                    <input type="password" class="form-control form__field--input"
+                                                        placeholder="Password" id="paswrd" required="">
+                                                    <img class="form__field--icon"
+                                                        src="https://tripjack.com/static/public/img/Form_password.svg"
+                                                        alt="image">
+                                                    <i class="far fa-eye-slash form__field--icon"></i>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button type="button" class="btn form__field--btn">Login</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h5 class="form__field--forget">Forgot your password? <a
+                                                            class="form__field--link">Reset Here</a></h5>
+                                                    <h5 class="form__field--signup">Don't have any account? <a
+                                                            class="form__field--link">Sign up here</a></h>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="content" id="content2">
+                                            <form class="login__form"></form>
+                                            <div class="form-group form__field">
+                                                <input type="text" class="form-control form__field--input"
+                                                    placeholder="Email" required>
+                                                <img class="form__field--icon"
+                                                    src="https://tripjack.com/static/public/img/Form_email.svg"
+                                                    alt="image">
+                                            </div>
+
+                                            <div class="form-group form__field">
+                                                <input type="password" class="form-control form__field--input"
+                                                    placeholder="Password" id="paswrd" required="">
+                                                <img class="form__field--icon"
+                                                    src="https://tripjack.com/static/public/img/Form_password.svg"
+                                                    alt="image">
+                                                <i class="far fa-eye-slash form__field--icon"></i>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <button type="button" class="btn form__field--btn">Login</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <h5 class="form__field--forget">Forgot your password? <a
+                                                        class="form__field--link">Reset Here</a></h5>
+                                                <h5 class="form__field--signup">Don't have any account? <a
+                                                        class="form__field--link">Sign up here</a></h>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        <div class="content" id="content3">
+                                            <form class="login__form"></form>
+                                            <div class="form-group form__field">
+                                                <input type="text" class="form-control form__field--input"
+                                                    placeholder="Email" required>
+                                                <img class="form__field--icon"
+                                                    src="https://tripjack.com/static/public/img/Form_email.svg"
+                                                    alt="image">
+                                            </div>
+
+                                            <div class="form-group form__field">
+                                                <input type="password" class="form-control form__field--input"
+                                                    placeholder="Password" id="paswrd" required="">
+                                                <img class="form__field--icon"
+                                                    src="https://tripjack.com/static/public/img/Form_password.svg"
+                                                    alt="image">
+                                                <i class="far fa-eye-slash form__field--icon"></i>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <button type="button" class="btn form__field--btn">Login</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <h5 class="form__field--forget">Forgot your password? <a
+                                                        class="form__field--link">Reset Here</a></h5>
+                                                <h5 class="form__field--signup">Don't have any account? <a
+                                                        class="form__field--link">Sign up here</a></h>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="business">
+            <div class="container">
+                <h1>Start your profitable business today with Best B2B Travel Portal in India</h1>
+                <div class="box">
+                    <div class="business__points">
+                        <p class="business__points--text">
+                            Tripjack is one of India's foremost B2B travel portals, constantly evolving and adding value
+                            in business by giving it's distributors and agents the best technology,deals and a
+                            user-friendly platform to transact and achieve their own financial freedom
+                        </p>
+                        <div class="box">
+                            <div class="business__container">
+                                <div class="business__content">
+                                    <img src="./images/experience.svg" class="business__content--image" alt="image">
+                                    <div class="business__details">
+                                        <h4 class="business__details--heading">30+</h4>
+                                        <p class="business__details--text">Years of business experience</p>
+                                    </div>
+                                </div>
+                                <div class="business__content">
+                                    <img src="./images/multiple_income.svg" class="business__content--image"
+                                        alt="image">
+                                    <div class="business__details">
+                                        <h4 class="business__details--heading">Multiple Income</h4>
+                                        <p class="business__details--text">Get awesome opportunities</p>
+                                    </div>
+                                </div>
+                                <div class="business__content">
+                                    <img src="./images/agent_portal.svg" class="business__content--image" alt="image">
+                                    <div class="business__details">
+                                        <h4 class="business__details--heading">Agent portal</h4>
+                                        <p class="business__details--text">Get Interactive exclusive portal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business__container">
+                                <div class="business__content">
+                                    <img src="./images/agent_support.svg" class="business__content--image" alt="image">
+                                    <div class="business__details">
+                                        <h4 class="business__details--heading">24/7</h4>
+                                        <p class="business__details--text">Agent support helpline</p>
+                                    </div>
+                                </div>
+                                <div class="business__content">
+                                    <img src="./images/good_commission.svg" class="business__content--image"
+                                        alt="image">
+                                    <div class="business__details">
+                                        <h4 class="business__details--heading">Good Commissions</h4>
+                                        <p class="business__details--text">Earn good deals and commissions</p>
+                                    </div>
+                                </div>
+                                <div class="business__content">
+                                    <img src="./images/latest_deals.svg" class="business__content--image" alt="image">
+                                    <div class="business__details">
+                                        <h4 class="business__details--heading">Latest Deals</h4>
+                                        <p class="business__details--text">Access to the great deals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/business_banner.png" class="business__image" alt="image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="register">
+            <div class="container">
+                <div class="register__header">
+                    <h3>GET STARTED WITH US</h3>
+                    <h2>Register as</h2>
+                </div>
+
+                <div class="box">
+                    <div class="register__content">
+                        <a class="register__content--link">
+                            <img src="./images/third_banner_img1.svg" class="register__content--img" alt="image">
+                            <p>Start a no-risk business of your own</p>
+                            <h2>Travel Agents -></h2>
+                        </a>
+                    </div>
+                    <div class="register__content active">
+                        <a class="register__content--link">
+                            <img src="./images/third_banner_img2.svg" class="register__content--img" alt="image">
+                            <p>Start a no-risk business of your own</p>
+                            <h2>Travel Agents -></h2>
+                        </a>
+                    </div>
+                    <div class="register__content">
+                        <a class="register__content--link">
+                            <img src="./images/third_banner_img3.svg" class="register__content--img" alt="image">
+                            <p>Start a no-risk business of your own</p>
+                            <h2>Travel Agents -></h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <div class="advantages__header">
+                    <h1>Tripjack Advantages</h1>
+                </div>
+                <div class="box">
+                    <div class="advantages__column">
+                        <div class="advantages__content">
+                            <img src="./images/advantage-01.png" class="advantages__content--img" alt="image">
+                            <div class="advantages__content--text">
+                                <h3 class="advantages__content--heading">Automated Payments</h3>
+                                <p class="advantages__content--para">Upload fund hassle free to your account even
+                                    through RTGS/NEFT/IMPS channels</p>
+                            </div>
+                        </div>
+                        <div class="advantages__content">
+                            <img src="./images/advantage-06.png" class="advantages__content--img" alt="image">
+                            <div class="advantages__content--text">
+                                <h3 class="advantages__content--heading">API/XML</h3>
+                                <p class="advantages__content--para">300 + Airlines 300,000 + Hotels with a single API
+                                    integration
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="advantages__content">
+                            <img src="./images/advantage-04.png" class="advantages__content--img" alt="image">
+                            <div class="advantages__content--text">
+                                <h3 class="advantages__content--heading">Largest Network of global Airfares</h3>
+                                <p class="advantages__content--para">Find fares from 40+ countries & book the best
+                                    flight deals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__column">
+                        <div class="advantages__content">
+                            <img src="./images/advantage-02.png" class="advantages__content--img" alt="image">
+                            <div class="advantages__content--text">
+                                <h3 class="advantages__content--heading">Mobile Friendly</h3>
+                                <p class="advantages__content--para">Do your business with ease on the go</p>
+                            </div>
+                        </div>
+                        <div class="advantages__content">
+                            <img src="./images/advantage-03.png" class="advantages__content--img" alt="image">
+                            <div class="advantages__content--text">
+                                <h3 class="advantages__content--heading">Post Booking Service Automation</h3>
+                                <p class="advantages__content--para">Manage all your booking completely online</p>
+                            </div>
+                        </div>
+                        <div class="advantages__content">
+                            <img src="./images/advantage-05.png" class="advantages__content--img" alt="image">
+                            <div class="advantages__content--text">
+                                <h3 class="advantages__content--heading">50+ Hotel Suppliers</h3>
+                                <p class="advantages__content--para">Leverage the best technology to find the best
+                                    worldwide hotel deals for your customers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="reason">
+            <h4 class="reason__heading">WHO WE ARE?</h4>
+            <h2 class="reason__title">5 reasons to start your own business with us.</h2>
+            <div class="carousel">
+                <input type="radio" name="slides" id="slide1" checked>
+                <input type="radio" name="slides" id="slide2">
+                <input type="radio" name="slides" id="slide3">
+                <input type="radio" name="slides" id="slide4">
+                <input type="radio" name="slides" id="slide5">
+
+                <div class="carousel__slides">
+                    <div class="carousel__slide">
+                        <img src="https://tripjack.com/static/public/img/flight_search.png" alt="Slide 1">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="https://tripjack.com/static/public/img/hotel_search.png" alt="Slide 2">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="https://tripjack.com/static/public/img/amendments.png" alt="Slide 3">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="https://tripjack.com/static/public/img/seamless_checkout.png" alt="Slide 4">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="https://tripjack.com/static/public/img/smart_accounts.png" alt="Slide 5">
+                    </div>
+                </div>
+
+                <div class="carousel__nav">
+                    <label class="label--one" for="slide1">
+                        <h5 class="carousel__nav--heading">Flight Search</h5>
+                        <p class="carousel__nav--para">Find the best flight deals with multiple fare options and clear
+                            policies
+                        </p>
+                    </label>
+                    <label for="slide2">
+                        <h5 class="carousel__nav--heading">Hotel Search</h5>
+                        <p class="carousel__nav--para">Explore worldwide hotels and provide a variety of options to
+                            your clients
+
+                        </p>
+                    </label>
+                    <label for="slide3">
+                        <h5 class="carousel__nav--heading">Easy Amendments</h5>
+                        <p class="carousel__nav--para">Manage changes to your bookings completely hassle-free
+                        </p>
+                    </label>
+                    <label for="slide4">
+                        <h5 class="carousel__nav--heading">Seamless Checkout</h5>
+                        <p class="carousel__nav--para">Book & review your choice of itineraries within seconds
+
+                        </p>
+                    </label>
+                    <label for="slide5">
+                        <h5 class="carousel__nav--heading">Smart Accounts</h>
+                            <p class="carousel__nav--para">Simple to use accounts helps you get real-time insights about
+                                your business
+                            </p>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback">
+            <h4 class="feedback__heading">20000+ BUSINESSES TRUST TRIPJACK</h4>
+            <div class="feedback__title">
+                <h2>People love Tripjack.</h2>
+                <h2>See some of the stories.</h2>
+            </div>
+            <div class="container">
+                <div class="feedback__box">
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+                    <div class="feedback__box--content">
+                        <div class="feedback__box--content--info">
+                            <img src="https://tripjack.com/static/public/img/agent/agent-feedback-6.jpg"
+                                class="feedback__box--img" alt="image">
+                            <div>
+                                <h4>LALIT AGARWAL</h4>
+                                <p>Business Head, Company Name (Location)</p>
+                            </div>
+                        </div>
+                        <div class="feedback__box--content--text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum iste, veniam et
+                                nulla corporis laborum
+                                quasi rem ipsa debitis illo ratione nisi vel placeat itaque magni commodi aut natus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="environment">
+            <div class="container">
+                <h4 class="environment__heading">OUR WORK ENVIRONMENT</h4>
+                <h2 class="environment__title">We work towards your success</h2>
+
+                <div class="environment__box">
+                    <img src="https://static.tripjack.com/img/tjEvent.jpg" class="environment__img environment__img1"
+                        alt="image">
+                    <div class="environment__box--content environment__box">
+                        <div class="environment__box--content--left">
+                            <div class="environment__box--content--left--full">
+                                <img src="https://static.tripjack.com/img/tjTeam2.JPG"
+                                    class="environment__img environment__img2" />
+                            </div>
+                            <div class="box">
+                                <div class="environment__box--content--left--half">
+                                    <img src="https://static.tripjack.com/img/tjAwards.jpg"
+                                        class="environment__img environment__img2" />
+                                </div>
+                                <div class="environment__box--content--left--half">
+                                    <img src="https://static.tripjack.com/img/tjTeam.png"
+                                        class="environment__img environment__img2" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="environment__box--content--left">
+                            <div class="box">
+                                <div class="environment__box--content--left--half">
+                                    <img src="https://static.tripjack.com/img/tjEvent2.jpg"
+                                        class="environment__img environment__img2" />
+                                </div>
+                                <div class="environment__box--content--left--half">
+                                    <img src="https://static.tripjack.com/img/tjAwards2.jpg"
+                                        class="environment__img environment__img2" />
+                                </div>
+                            </div>
+                            <div class="environment__box--content--left--full">
+                                <img src="https://static.tripjack.com/img/tjConference.JPG"
+                                    class="environment__img environment__img2" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact">
+        <div class="container">
+            <div class="box">
+                <div class="contact__work--us">
+                    <h2>Work With Us</h2>
+                    <a class="contact--btn contact__work-btn">GET STARTED</a>
+                </div>
+                <div class="contact__touch">
+                    <h2>Get In Touch</h2>
+                    <a class="contact--btn contact__touch--btn">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="container" id="footer">
+        <div class="box">
+            <div class="">
+                <img src="./images/footer-logo.png" class="" alt="image">
+                <p class="footer__link">&copy; Tripjack 2024</p>
+            </div>
+            <div class="">
+                <h5 class="footer__heading">More Links</h5>
+                <a href="#" class="footer__link">Terms &amp; conditions</a>
+                <a href="#" class="footer__link">Payment Security</a>
+                <a href="#" target="_blank" class="footer__link">Agent Desk</a>
+            </div>
+            <div class="">
+                <h5 class="footer__heading">POLICIES</h5>
+                <a href="#" class="footer__link">Privacy Policy</a>
+            </div>
+            <div class="">
+                <h5 class="footer__heading">RESOURCES</h5>
+                <a href="#" class="footer__link">Careers</a>
+            </div>
+            <div class="">
+                <h5 class="footer__heading">Get In Touch</h5>
+                <a href="#" class="footer__link">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

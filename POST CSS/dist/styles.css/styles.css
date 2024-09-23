@@ -1,0 +1,9 @@
+body {
+    height: 100vh;
+}
+body ul {
+        background-color: purple;
+    }
+body .title {
+        color: red;
+    }

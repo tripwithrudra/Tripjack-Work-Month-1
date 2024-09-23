@@ -1,0 +1,35 @@
+.text {
+  color: #24a0ed;
+}
+
+button {
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  width: 90px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid #24a0ed;
+}
+nav h1 {
+  color: #24a0ed;
+}
+nav h1:hover {
+  color: black;
+}
+nav h1::after {
+  content: "";
+  width: 60px;
+  height: 40px;
+  display: block;
+  background-color: black;
+  margin: 0 auto;
+}
+nav h1::after:hover {
+  background-color: #24a0ed;
+}/*# sourceMappingURL=style.css.map */

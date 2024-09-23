@@ -1,0 +1,19 @@
+{
+  "name": "post-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postcss:watch": "postcss src/styles.css --dir dist/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^10.0.5"
+  }
+}

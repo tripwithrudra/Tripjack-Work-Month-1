@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Validated Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <form id="jsForm">
+    <label for="username">Username (3-16 characters)</label>
+    <input id="username" name="username" type="text" />
+    <div id="usernameError" class="error-message hidden"></div>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" />
+    <div id="emailError" class="error-message hidden"></div>
+
+    <label for="password">Password (8-20 characters)</label>
+    <input id="password" name="password" type="password" />
+    <div id="passwordError" class="error-message hidden"></div>
+
+    <label for="confirm_password">Confirm Password</label>
+    <input id="confirm_password" name="confirm_password" type="password" />
+    <div id="confirmPasswordError" class="error-message hidden"></div>
+
+    <label for="dob">Date of Birth</label>
+    <input id="dob" name="dob" type="date" />
+    <div id="dobError" class="error-message hidden"></div>
+
+    <label for="phone">Phone Number (10 digits)</label>
+    <input id="phone" name="phone" type="tel" />
+    <div id="phoneError" class="error-message hidden"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

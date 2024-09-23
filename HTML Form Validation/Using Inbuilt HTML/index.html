@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validated Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label for="username">Username (3-16 characters)</label>
+    <input id="username" name="username" type="text" pattern="[a-z]{3,16}" title="Input must be 3-16 characters and only contain lowercase letters" required />
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" title="Input must be a valid email" required />
+
+    <label for="password">Password (8-20 characters)</label>
+    <input id="password" name="password" type="password" pattern=".{8,20}" required />
+
+    <label for="confirm_password">Confirm Password</label>
+    <input id="confirm_password" name="confirm_password" type="password" required />
+
+    <label for="dob">Date of Birth</label>
+    <input id="dob" name="dob" type="date" required />
+
+    <label for="phone">Phone Number (10 digits)</label>
+    <input id="phone" name="phone" type="tel" pattern="\d{10}" required />
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

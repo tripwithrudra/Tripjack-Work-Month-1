@@ -1,0 +1,25 @@
+nav {
+  color: #ff2525;
+}
+nav h2 {
+  padding: 20px;
+}
+h3 {
+  padding: 15px;
+  background-color: #c9bdbd;
+  color: #ff2525;
+}
+nav {
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #c9bdbd;
+}
+.cat-bg {
+  width: 700px;
+  height: 300px;
+  background: url("imgs/cat.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

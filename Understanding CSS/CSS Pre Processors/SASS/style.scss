@@ -1,0 +1,47 @@
+$primary-color: #24a0ed;
+$secondary-color: darken($primary-color, 80%);
+
+@mixin kuchbhi($width, $height: 200px) {
+  display: flex;
+  width: $width;
+  height: $height;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid $primary-color;
+}
+
+.text {
+  color: $primary-color;
+}
+
+button {
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+  padding: 10px 20px;
+}
+
+nav {
+  @include kuchbhi(90px);
+
+  h1 {
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &::after {
+      content: "";
+      width: 30px + 30px;
+      height: 40px;
+      display: block;
+      background-color: $secondary-color;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+}

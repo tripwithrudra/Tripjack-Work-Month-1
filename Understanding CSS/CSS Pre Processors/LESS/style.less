@@ -1,0 +1,40 @@
+@primarycolor: #2e2626;
+@secondarycolor: lighten(@primarycolor, 60%);
+@c: #ff2525;
+
+nav {
+    h2 {
+        padding: 20px;
+    }
+    color: @color;
+}
+
+h3 {
+    padding: 15px;
+    background-color: @secondarycolor;
+    color: @color;
+}
+
+// Variables
+@new-selector: nav;
+
+// Usage
+@{new-selector} {
+    font-weight: bold;
+    line-height: 40px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: @secondarycolor;
+}
+
+// Variables
+@images: "./imgs";
+
+// Usage
+.cat-bg {
+    width: 700px;
+    height: 300px;
+    background: url("@{images}/cat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

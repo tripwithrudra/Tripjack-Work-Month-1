@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .link + .link {
+            color: red;
+        }
+        /* .link + .link + .link {
+            color: orange;
+        } */
+        .link.link {
+            color: blue;
+        }
+        .link .link {
+            color: green;
+        }
+        
+        .link, .linkish {
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="link">
+        <p class="link">Link 0</p>
+
+    </div>
+   
+    <p class="link">Link 2</p>
+
+   
+    <p class="link link">Link 3</p>
+
+    <div class="link">
+        <div>
+            <div class="link">Link Shunya</div>
+        </div>
+    </div>
+
+    
+    <p class="linkish">Linkish 1</p>
+
+
+    <p class="link">
+        <span class="link">Nested Link</span>
+    </p>
+
+</body>
+</html>
