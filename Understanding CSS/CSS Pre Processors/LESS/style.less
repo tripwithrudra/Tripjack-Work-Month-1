@@ -6,6 +6,7 @@ nav {
     h2 {
         padding: 20px;
     }
+
     color: @color;
 }
 
@@ -40,8 +41,26 @@ h3 {
 }
 
 // Importing other files
-@import "myfile.less";  
-.myclass2  
-{  
-color: brown;  
-}  
+@import "myfile.less";
+.myclass2 {
+    color: brown;
+}
+
+
+@some: #892341;
+
+.funtional-div {
+    margin: if((2 > 1), 0, 3px);
+    color: if((iscolor(@some)), @some, black);
+}
+
+
+
+// The Less luma function is used to calculate the perceptual brightness or luma of a color object.
+@bg: #f7ff59;
+@bg-light: boolean(luma(@bg) > 50%);
+
+.funtional-div {
+    background: @bg;
+    border: 1px solid if(@bg-light, black, white);
+}
