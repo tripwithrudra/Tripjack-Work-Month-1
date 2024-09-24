@@ -23,3 +23,12 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.myclass {
+  color: blue;
+}
+.myclass1 {
+  color: red;
+}
+.myclass2 {
+  color: brown;
+}
