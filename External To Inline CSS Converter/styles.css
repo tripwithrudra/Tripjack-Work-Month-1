@@ -1,0 +1,31 @@
+/* styles.css */
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: darkblue;
+  font-size: 24px;
+}
+
+p {
+  color: #333;
+  font-size: 14px;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#unique-element {
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "external-to-inline-css-converter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "css": "^3.0.0",
+    "jsdom": "^25.0.1"
+  }
+}
