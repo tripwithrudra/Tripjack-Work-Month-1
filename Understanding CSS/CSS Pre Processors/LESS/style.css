@@ -40,3 +40,34 @@ nav {
   background: #f7ff59;
   border: 1px solid black;
 }
+.animal,
+.bear {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 40px 0;
+}
+.bear {
+  background-color: brown;
+}
+.m-button {
+  margin: 100px;
+}
+.m-anchor {
+  display: inline;
+  margin: 400px;
+}
+.responsive-element {
+  background-color: #2e2626;
+  color: #00ff00;
+  padding: 20px;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .responsive-element {
+    background-color: #ff2525;
+    color: #fff;
+    padding: 30px;
+    font-size: 1.2rem;
+  }
+}

@@ -42,6 +42,7 @@ h3 {
 
 // Importing other files
 @import "myfile.less";
+
 .myclass2 {
     color: brown;
 }
@@ -63,4 +64,44 @@ h3 {
 .funtional-div {
     background: @bg;
     border: 1px solid if(@bg-light, black, white);
+}
+
+
+.animal {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.bear {
+    &:extend(.animal);
+    background-color: brown;
+}
+
+.m-button {
+    margin: 100px;
+}
+
+.m-anchor {
+    display: inline;
+    margin: 400px;
+}
+
+.responsive-element {
+    background-color: @primarycolor;
+    color: #00ff00;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+@max768: ~"(max-width: 768px)";
+
+.responsive-element {
+    @media @max768 {
+        background-color: @color;
+        color: #fff;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
 }
