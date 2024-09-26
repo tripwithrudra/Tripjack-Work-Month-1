@@ -21,3 +21,13 @@
 - Triple equal checks for value and type of the compared variables
 
 <hr>
+
+### Truthy and Falsy Values
+- Truthy values are those which will be converted (coerced) to true.
+- Falsy values are those which will be converted to false.
+- All values except false, 0, 0n, -0, “”, null, undefined, and NaN are truthy values.
+
+<hr>
+
+### JavaScript is a dynamically typed language
+![alt text](image.png)
