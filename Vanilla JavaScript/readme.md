@@ -31,3 +31,27 @@
 
 ### JavaScript is a dynamically typed language
 ![alt text](image.png)
+
+<hr>
+
+### Browser Context API
+- A browser context API allows you to run multiple independent browser sessions, each with their own settings, cache, cookies, and storage.
+
+<hr>
+
+### Jitne bhi var data humare program me hota hai unhe store kahi to karna padhta hai, uske liye hota hai heap memory.
+### Ek calculation ko karte waqt jo beech ka intermediate data hai, that is stored in heap memory.
+
+<hr>
+
+### Execution Context
+#### Execution is a container where the function's code is excetued, and it is always created whenever a function is called. It contain three things:
+1. Variables
+2. Functions inside that parent function
+3. Lexical Environment of that function
+
+#### Lexical Environment hota hai chart, jisme likha hota hai ek particular function kin cheezo ko access kar sakta hai. 
+- It holds the scope and scope chain of a function
+
+<hr>
+
