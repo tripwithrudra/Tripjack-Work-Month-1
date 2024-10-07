@@ -17,6 +17,7 @@ function getWeather() {
         .then(response => response.json())
         .then(data => {
             // console.log(data);
+            // console.log(typeof data);
             displayWeather(data);
         })
         .catch(error => {
@@ -66,6 +67,7 @@ function getWeather() {
 //         }
 //         const forecastData = await forecastResponse.json();
 //         displayHourlyForecast(forecastData.list);
+
 
 //     } catch (error) {
 //         console.error(error.message);
