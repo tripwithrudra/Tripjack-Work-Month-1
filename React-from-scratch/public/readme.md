@@ -1,0 +1,1 @@
+### When creating a React component, the component's name must start with an upper case letter.

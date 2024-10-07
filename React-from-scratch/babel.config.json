@@ -1,0 +1,21 @@
+// To utilize the Babel presets, the following configuration must be added to babel.config.json:
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "esmodules": true
+                }
+            }
+        ],
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ]
+}
+// In the above @babel/preset-env must be set to target esmodules in order to use the latest Node modules. 
+// Additionally, defining the JSX runtime to automatic is necessary since React 18 has adopted the new JSX Transform functionality.
