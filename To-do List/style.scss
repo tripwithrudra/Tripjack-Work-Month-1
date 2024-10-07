@@ -79,3 +79,10 @@ span + .completed {
         background-color: #7c0000;
     }
 }
+
+input[type="checkbox"]:checked {
+    p {
+        text-decoration: line-through;
+        color: #888;
+    }
+}
