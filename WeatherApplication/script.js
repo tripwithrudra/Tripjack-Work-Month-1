@@ -1,40 +1,7 @@
 // import env from 'dotenv';
 // env.config();
 
-// function getWeather() {
-//     const apiKey = `6ed0c82028062a8c46d28edfc75d6d2a`;
-//     const city = document.getElementById('city').value;
-
-//     if (!city) {
-//         alert('Please enter a city');
-//         return;
-//     }
-
-//     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-//     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
-
-//     fetch(currentWeatherUrl)
-//         .then(response => response.json())
-//         .then(data => {
-//             displayWeather(data);
-//         })
-//         .catch(error => {
-//             console.error('Error fetching current weather data:', error);
-//             alert('Error fetching current weather data. Please try again.');
-//         });
-
-//     fetch(forecastUrl)
-//         .then(response => response.json())
-//         .then(data => {
-//             displayHourlyForecast(data.list);
-//         })
-//         .catch(error => {
-//             console.error('Error fetching hourly forecast data:', error);
-//             alert('Error fetching hourly forecast data. Please try again.');
-//         });
-// }
-
-async function getWeather() {
+function getWeather() {
     const apiKey = `6ed0c82028062a8c46d28edfc75d6d2a`;
     const city = document.getElementById('city').value;
 
@@ -46,27 +13,65 @@ async function getWeather() {
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
-    try {
-        const weatherResponse = await fetch(currentWeatherUrl);
-        if (!weatherResponse.ok) {
-            throw new Error('Error fetching current weather data');
-        }
-        const weatherData = await weatherResponse.json();
-        displayWeather(weatherData);
+    fetch(currentWeatherUrl)
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            displayWeather(data);
+        })
+        .catch(error => {
+            console.error('Error fetching current weather data:', error);
+            alert('Error fetching current weather data. Please try again.');
+        });
 
-        // Fetch hourly forecast data
-        const forecastResponse = await fetch(forecastUrl);
-        if (!forecastResponse.ok) {
-            throw new Error('Error fetching hourly forecast data');
-        }
-        const forecastData = await forecastResponse.json();
-        displayHourlyForecast(forecastData.list);
-
-    } catch (error) {
-        console.error(error.message);
-        alert(error.message);
-    }
+    fetch(forecastUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayHourlyForecast(data.list);
+        })
+        .catch(error => {
+            console.error('Error fetching hourly forecast data:', error);
+            alert('Error fetching hourly forecast data. Please try again.');
+        });
 }
+
+// async function getWeather() {
+//     const apiKey = `6ed0c82028062a8c46d28edfc75d6d2a`;
+//     const city = document.getElementById('city').value;
+
+//     if (!city) {
+//         alert('Please enter a city');
+//         return;
+//     }
+
+//     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+//     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+
+//     try {
+//         const weatherResponse = await fetch(currentWeatherUrl);
+//         console.log(weatherResponse);
+        
+//         if (!weatherResponse.ok) {
+//             throw new Error('Error fetching current weather data');
+//         }
+//         const weatherData = await weatherResponse.json();
+//         // console.log(weatherData);
+
+//         displayWeather(weatherData);
+
+//         // Fetch hourly forecast data
+//         const forecastResponse = await fetch(forecastUrl);
+//         if (!forecastResponse.ok) {
+//             throw new Error('Error fetching hourly forecast data');
+//         }
+//         const forecastData = await forecastResponse.json();
+//         displayHourlyForecast(forecastData.list);
+
+//     } catch (error) {
+//         console.error(error.message);
+//         alert(error.message);
+//     }
+// }
 
 
 function displayWeather(data) {
@@ -79,7 +84,7 @@ function displayWeather(data) {
     hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
 
-    console.log(data);
+    // console.log(data);
 
     if (data.cod === '404') {
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
@@ -111,11 +116,10 @@ function displayWeather(data) {
 function displayHourlyForecast(hourlyData) {
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
 
-    const next24Hours = hourlyData.slice(0, 8); // (3 Hour Intervals) 24 / 8 = 3
+    const next24Hours = hourlyData.slice(0, 8); // (3 Hour Intervals) -> 24 / 8 = 3
 
     next24Hours.forEach(item => {
         // console.log(item);
-
         const dateTime = new Date(item.dt * 1000); // Convert timestamp to milliseconds
         const hour = dateTime.getHours();
         const temperature = Math.round(item.main.temp - 273.15); // Convert to Celsius
