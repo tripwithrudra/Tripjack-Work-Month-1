@@ -25,7 +25,9 @@ function makeCicle(x, y) {
 
         // Define random circle radius between 10 and 100
         const randomNumber = Math.random();
-        let circleRadius = Math.floor(randomNumber * (100 - 10)) + 50;
+        const minRadius = 10;
+        const maxRadius = 100;
+        let circleRadius = Math.floor(randomNumber * (maxRadius - minRadius)) + minRadius;
         newCircle.style.position = 'absolute';
         newCircle.style.left = x - circleRadius + 'px';
         newCircle.style.top = y - circleRadius + 'px';
