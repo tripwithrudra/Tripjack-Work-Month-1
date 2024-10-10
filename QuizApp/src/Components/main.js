@@ -10,33 +10,49 @@ class MainQuiz extends React.Component {
             totalScore: 0,
             currentQuestionIndex: 0,
             quizCompleted: false,
-        }
+            name: ""
+        };
+        this.handleOptionClick = this.handleOptionClick.bind(this);
     }
 
     componentDidMount() {
+        console.log("componentDidMount was called !!!!")
         let updatedTotalScore = 0;
-        questions.map((item, index) => {
-            updatedTotalScore += item.marks
-        })
+        questions.forEach(item => {
+            updatedTotalScore += item.marks;
+        });
         this.setState({
             totalScore: updatedTotalScore
-        })
+        });
     }
 
-    // calculateTotalScore = () => {
-    //     console.log('calculateTotalScore called ...')
-    //     questions.map((item, index) => {
-    //         this.setState({
-    //             totalScore: this.state.totalScore + item.marks
-    //         })
-    //     })
-    //     console.log("totalscore : ",this.state.totalScore);
-    //     // return this.state.totalScore;
-    // }
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("Next Props: ", nextProps);
+        console.log("Next State", nextState);
+        return true; r
+    }
 
-    handleOptionClick = (selectedOption) => {
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        if (prevState.currentQuestionIndex !== this.state.currentQuestionIndex) {
+            console.log("Snapshot: Moving to the next question..........");
+        }
+        return null;
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) { // extra props added for understanding
+        console.log({ prevState })
+        if (prevState.currentQuestionIndex !== this.state.currentQuestionIndex) {
+            console.log("Component Updated! New question.");
+        }
+    }
+
+    componentWillUnmount() {
+        console.log("main component is removed from DOM");
+    }
+
+    handleOptionClick (selectedOption) {
         const { currentQuestionIndex, score } = this.state;
-        const currentQuestion = questions[currentQuestionIndex]
+        const currentQuestion = questions[currentQuestionIndex];
 
         let updatedScore = score;
         if (selectedOption === currentQuestion.answer) {
@@ -47,48 +63,64 @@ class MainQuiz extends React.Component {
             this.setState({
                 quizCompleted: true,
                 score: updatedScore
-            })
-        }
-        else {
+            });
+        } else {
             this.setState({
                 currentQuestionIndex: currentQuestionIndex + 1,
                 score: updatedScore
-            })
+            });
         }
     }
 
-    restartQuiz() {
+    restartQuiz = () => {
         this.setState({
             currentQuestionIndex: 0,
             score: 0,
             quizCompleted: false
+        });
+    }
+
+    handleNameChange = (e) => {
+        const { value = '' } = e.target;
+
+        console.log({ value })
+        this.setState({
+            name: value
         })
     }
 
-
     render() {
-        console.log("Render was called!");
-        const { score, currentQuestionIndex, quizCompleted, totalScore } = this.state;
+        const { score, currentQuestionIndex, quizCompleted, totalScore, name } = this.state;
 
         if (quizCompleted) {
             return (
-
                 <div className="quiz-container">
                     <h2>Quiz Completed</h2>
                     <p>Score: {score} / {totalScore}</p>
-                    <button
-                        onClick={() => this.restartQuiz()}
-                    >Restart
-                    </button>
+                    <button onClick={this.restartQuiz}>Restart</button>
                 </div>
-            )
+            );
         }
 
         const currentQuestion = questions[currentQuestionIndex];
         return (
-            <QuizContainer currentQuestionIndex={currentQuestionIndex} currentQuestion={currentQuestion} score={score} handleOptionClick={this.handleOptionClick} />
-        )
+            <>
+                <div style={{ margin: "0 2rem" }} >
+                    <label htmlFor="name">Name: </label>
+                    <input id="name" type="text" onChange={this.handleNameChange} />
+                    <h2>{name}</h2>
+                </div>
+
+                <QuizContainer
+                    currentQuestionIndex={currentQuestionIndex}
+                    currentQuestion={currentQuestion}
+                    score={score}
+                    handleOptionClick={this.handleOptionClick}
+                    name={name}
+                />
+            </>
+        );
     }
 }
 
-export default MainQuiz
+export default MainQuiz;
