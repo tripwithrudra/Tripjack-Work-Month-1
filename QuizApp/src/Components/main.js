@@ -14,6 +14,8 @@ class MainQuiz extends React.Component {
             nameEntered: false
         };
         this.handleOptionClick = this.handleOptionClick.bind(this);
+        console.log(this.state.score);
+
     }
 
     componentDidMount() {
@@ -121,15 +123,14 @@ class MainQuiz extends React.Component {
                     )
                 }
 
-                {
-                    nameEntered && <QuizContainer
+                <QuizContainer
                     currentQuestionIndex={currentQuestionIndex}
                     currentQuestion={currentQuestion}
                     score={score}
                     handleOptionClick={this.handleOptionClick}
                     name={name}
+                    nameEntered={nameEntered}
                 />
-    }
             </>
         );
     }
