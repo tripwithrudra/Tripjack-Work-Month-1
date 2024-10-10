@@ -1,5 +1,7 @@
 import React from "react";
 import Car from './CarDetails'
+import Counter from "./Counter";
+import LifeCycle from "./lifecycle";
 
 const InfoCard = ({ name, age, phone }) => {
     return (
@@ -14,6 +16,12 @@ const InfoCard = ({ name, age, phone }) => {
             <h2>Below is Class Component:</h2>
             <h2>I have a car.</h2>
             <Car brand="TATA" />
+
+
+            <Counter />
+
+
+            <LifeCycle />
         </div>
     )
 }

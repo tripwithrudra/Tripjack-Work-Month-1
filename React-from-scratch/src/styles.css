@@ -1,0 +1,15 @@
+#container {
+    background-color: #9fcaff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background-color: #ff6161;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    border: none;
+}
