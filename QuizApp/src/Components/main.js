@@ -10,7 +10,8 @@ class MainQuiz extends React.Component {
             totalScore: 0,
             currentQuestionIndex: 0,
             quizCompleted: false,
-            name: ""
+            name: "",
+            nameEntered: false
         };
         this.handleOptionClick = this.handleOptionClick.bind(this);
     }
@@ -50,7 +51,7 @@ class MainQuiz extends React.Component {
         console.log("main component is removed from DOM");
     }
 
-    handleOptionClick (selectedOption) {
+    handleOptionClick(selectedOption) {
         const { currentQuestionIndex, score } = this.state;
         const currentQuestion = questions[currentQuestionIndex];
 
@@ -90,7 +91,7 @@ class MainQuiz extends React.Component {
     }
 
     render() {
-        const { score, currentQuestionIndex, quizCompleted, totalScore, name } = this.state;
+        const { score, currentQuestionIndex, quizCompleted, totalScore, name, nameEntered } = this.state;
 
         if (quizCompleted) {
             return (
@@ -105,19 +106,30 @@ class MainQuiz extends React.Component {
         const currentQuestion = questions[currentQuestionIndex];
         return (
             <>
-                <div style={{ margin: "0 2rem" }} >
-                    <label htmlFor="name">Name: </label>
-                    <input id="name" type="text" onChange={this.handleNameChange} />
-                    <h2>{name}</h2>
-                </div>
+                {
+                    !nameEntered && (<div style={{ margin: "0 2rem" }} >
+                        <label htmlFor="name">Name: </label>
+                        <input id="name" type="text" onChange={this.handleNameChange} />
+                        <button onClick={() => {
+                            this.setState({
+                                nameEntered: true
+                            })
+                        }}>
+                            Insert
+                        </button>
+                    </div>
+                    )
+                }
 
-                <QuizContainer
+                {
+                    nameEntered && <QuizContainer
                     currentQuestionIndex={currentQuestionIndex}
                     currentQuestion={currentQuestion}
                     score={score}
                     handleOptionClick={this.handleOptionClick}
                     name={name}
                 />
+    }
             </>
         );
     }

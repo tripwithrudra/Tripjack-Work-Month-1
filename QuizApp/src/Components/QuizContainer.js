@@ -32,7 +32,7 @@ export class QuizContainer extends Component {
         const { currentQuestionIndex, currentQuestion, score, handleOptionClick, name } = this.props;
         return (
             <div className="quiz-container">
-                <h2>Hello {name || "User"}!</h2>
+                <h2>Hello {name}!</h2>
                 <h3>Question - {currentQuestionIndex + 1}:</h3>
                 <h4>{currentQuestion.question}</h4>
                 <ul>
