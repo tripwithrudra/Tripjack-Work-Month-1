@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class RecipeConainer extends Component {
+class RecipeContainer extends Component {
     constructor(props) {
         super(props)
     }
@@ -23,13 +23,13 @@ class RecipeConainer extends Component {
         )
     }
 }
-export default RecipeConainer;
+export default RecipeContainer;
 
 
 
 // import React from 'react'
 
-// function RecipeConainer({recipes}) {
+// function RecipeContainer({recipes}) {
 //     return (
 //         <div className="recipe">
 //             {
@@ -47,4 +47,4 @@ export default RecipeConainer;
 //     )
 // }
 
-// export default RecipeConainer
+// export default RecipeContainer

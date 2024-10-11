@@ -1,5 +1,5 @@
 // import React from 'react';
-// import RecipeConainer from './RecipeConainer';
+// import RecipeContainer from './RecipeContainer';
 
 // class Main extends React.Component {
 //     constructor(props) {
@@ -90,7 +90,7 @@
 
 import React from 'react'
 import { useState } from 'react';
-import RecipeConainer from './RecipeContainer';
+import RecipeContainer from './RecipeContainer';
 
 function Main() {
     // { query, recipes, loading, error } 
@@ -165,7 +165,7 @@ function Main() {
             {/* {error && <p>{error}</p>} */}
 
             <div className="recipes">
-                <RecipeConainer recipes={recipes} />
+                <RecipeContainer recipes={recipes} />
             </div>
         </div>
     );
