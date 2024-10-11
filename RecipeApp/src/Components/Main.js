@@ -90,7 +90,7 @@
 
 import React from 'react'
 import { useState } from 'react';
-import RecipeConainer from './RecipeConainer';
+import RecipeConainer from './RecipeContainer';
 
 function Main() {
     // { query, recipes, loading, error } 
