@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Haettenschweiler, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.todo__wrapper {
+    background-color: #194266;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    color: #ffffff;
+    overflow-y: auto;
+    height: 80vh;
+    width: 65vw;
+    scrollbar-width: none;
+}
+
+.todo__wrapper__heading {
+    text-align: center;
+}
+
+.todo__form {
+    padding: 2rem 0rem;
+    width: 55vw;
+    margin: 0 auto;
+}
+
+.todo__input {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: #000000;
+    border-radius: 20px 0 0 20px;
+    width: 45vw;
+}
+
+.todo__btn {
+    background-color: #151854;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #151854;
+}
+
+.todo__btn:hover {
+    scale: 1.04;
+    background-color: #1d1f47;
+    border: 1px solid transparent;
+}
+
+.todo {
+    background-color: #bfe1ff;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    max-width: 45vw;
+    border-radius: 20px;
+}
+
+.todo p {
+    overflow-x: auto;
+    /* scrollbar-width: thin; */
+    scrollbar-width: none;
+    cursor: pointer;
+}
+
+.todo p.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.icons__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.edit__icon {
+    cursor: pointer;
+}
+
+.delete__icon {
+    cursor: pointer;
+}
+
+
+.todo__edit__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    margin: 1rem auto;
+    gap: 0;
+    max-width: 50vw;
+}
+
+.todo__edit__input {
+    background-color: #bfe1ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    border: none;
+    width: 36vw;
+}
+
+.todo__edit__btn {
+    background-color: #151854;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #151854;
+}
