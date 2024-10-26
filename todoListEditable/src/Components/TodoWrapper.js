@@ -46,7 +46,6 @@ class TodoWrapper extends Component {
 
 
     render() {
-        this.state.tasks.map(todo => console.log(todo))
         return (
             <div className='todo__wrapper'>
                 <h1 className='todo__wrapper__heading'>Be Fast!</h1>

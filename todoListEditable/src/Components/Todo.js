@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect } from 'react'
 
 function Todo({ todo, toggleComplete, deleteTask, toggleEditing }) {
-    // console.log("Current Todo: ", todo)
     return (
         <div className='todo'>
             <p onClick={() => toggleComplete(todo.id)} className={`${todo.completed ? 'completed' : ''}`} id='single__todo'>{todo.task}</p>
