@@ -2,7 +2,7 @@
 // env.config();
 
 function getWeather() {
-    const apiKey = `6ed0c82028062a8c46d28edfc75d6d2a`;
+    const apiKey = `{{api.key}}`;
     const city = document.getElementById('city').value;
 
     if (!city) {

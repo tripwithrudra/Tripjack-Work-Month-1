@@ -1,0 +1,38 @@
+.quiz-container {
+    margin: 1.5rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.quiz-container h3 {
+    font-size: 1.5;
+    margin-bottom: 10px;
+}
+
+.quiz-container h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.quiz-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz-container li {
+    margin: 5px 0;
+}
+
+.quiz-container button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.quiz-container button:hover {
+    background-color: #b5d0ff;
+}
